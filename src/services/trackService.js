@@ -2,8 +2,11 @@ const BASE_URL = `${import.meta.env.VITE_BACK_END_URL}/tracks`
 const index = async ()=>{
     try {
         const res = await fetch(BASE_URL)
-        return res.json()
-
+        const data = await res.json()
+        if (data.length === 0){
+            return 'No tracks found'
+        }
+        return data
     } catch (error) {
         console.log(error)
     }

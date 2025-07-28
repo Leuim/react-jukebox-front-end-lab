@@ -6,7 +6,6 @@ const App = ()=>{
 
   return(
     <>
-    <h1>JukeBox</h1>
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/add-track' element={<TrackForm/>}/>
